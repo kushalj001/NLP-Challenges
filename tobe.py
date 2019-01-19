@@ -187,18 +187,19 @@ for i in range(0,len(before_blank)):
         answers[i+1] = 'am'
     elif before_blank[i][1] == 'MD' or before_blank[i][0] in ['can\'t','won\'t','wasn\'t','isn\'t']:
         answers[i+1] = 'be'
-    elif before_blank[i][0] in ['has','have','had','am']:
+    elif before_blank[i][0] in ['has','have','had']:
         answers[i+1] = 'been'
-    elif before_blank[i][0] in ['is','was','were']:
+    elif before_blank[i][0] in ['is','was','were','am']:
         answers[i+1] = 'being'
-    elif data[i+1]['past'] == True and data[i+1]['singular'] == True:
+    elif (after_blank[i][1] in ['VBG'] and data[i+1]['singular'] == True and data[i+1]['past'] == True) or (after_blank[i][1] in ['VBD','VBN'] and data[i+1]['singular'] == True) or (data[i+1]['past'] == True and data[i+1]['singular'] == True):
         answers[i+1] = 'was'
-    elif data[i+1]['past'] == True and data[i+1]['singular'] == False:
+    elif (after_blank[i][1] in ['VBG'] and data[i+1]['singular'] == False and data[i+1]['past'] == True) or (after_blank[i][1] in ['VBD','VBN'] and data[i+1]['singular'] == False) or (data[i+1]['past'] == True and data[i+1]['singular'] == False):
         answers[i+1] = 'were'
-    elif data[i+1]['past'] == False and data[i+1]['singular'] == True:
+    elif (after_blank[i][1] in ['VBG'] and data[i+1]['singular']==True) or (data[i+1]['past'] == False and data[i+1]['singular'] == True):
         answers[i+1] = 'is'
-    elif data[i+1]['past'] == False and data[i+1]['singular'] == False:
+    elif (after_blank[i][1] in ['VBG'] and data[i+1]['singular']==False) or (data[i+1]['past'] == False and data[i+1]['singular'] == False):
         answers[i+1] = 'are'
 
+        
 for k,v in answers.items():
     print(v)
