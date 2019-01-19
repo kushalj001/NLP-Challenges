@@ -14,3 +14,6 @@ Set of rules followed in order to find the right form of verb are as follows:-
   3. If the word before is in any of ['has','had','have'] the answer will be "been".
   4. If the word before is in any of ['was','is','are','were','am'] the answer will be "being".
   5. Remaining answers viz., is, are, was, were are determined by carefully analyzing the information provided by POS tags near the blank      as well as the context info. 
+
+## Project Structure ##
+Each folder contains a jupyter notebook which demonstrates the working code and a python script as well. 
