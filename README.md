@@ -11,8 +11,8 @@ Set of rules followed in order to find the right form of verb are as follows:-
 * Once the information from words near the blank and context is combined, a set of rules are determined for assigning the correct answer:-
   * If the word before the blank is 'I' then the answer is 'am'.
   * If the word before is any modal (will,could shall) , the answer will _be_ "be".
-  * If the word before is in any of ['has','had','have'] the answer will be "been".
-  * If the word before is in any of ['was','is','are','were','am'] the answer will be "being".
+  * If the word before is in any of ['has', 'had', 'have'] the answer will be "been".
+  * If the word before is in any of ['was', 'is', 'are', 'were', 'am'] the answer will be "being".
   *  Remaining answers viz., is, are, was, were are determined by carefully analyzing the information provided by POS tags near the blank      as well as the context info. 
 
 ## Project Structure ##
