@@ -2,7 +2,7 @@
 
 ## Flipkart Search Query ##
 * The training data is not very large and has only 111 unique entries. In order to get the most out of the limited data, the text is preprocessed thoroughly. Removal of punctuation, tokenization and removal of stop words is done. Lemmatization was not proving to be too useful hence avoided. 
-* The preprocessed text is then fed to a *TF-IDF* (Term frequency-inverse document frequency) vectorizer which converts the words or text features into numeric features. Two classifiers were trained and tested, Random Forest and Support Vector Machine. SVM performed better after choosing correct set of hyperparameters by using Grid search.The problem can be solved more accurately by using string matching techniques.
+* The preprocessed text is then fed to a *TF-IDF* (Term frequency-inverse document frequency) vectorizer which converts the words or text features into numeric features. Two classifiers were trained and tested, Random Forest and Support Vector Machine. SVM performed better after choosing correct set of hyperparameters by using Grid search. The problem can be solved more accurately by using string matching techniques.
 
 ## To Be Or Not To Be ##
 Set of rules followed in order to find the right form of verb are as follows:-
