@@ -185,7 +185,7 @@ answers = {}
 for i in range(0,len(before_blank)):
     if before_blank[i][0] == 'I':
         answers[i+1] = 'am'
-    elif before_blank[i][1] == 'MD' or before_blank[i][0] in ['can\'t','won\'t','wasn\'t','isn\'t']:
+    elif before_blank[i][1] == 'MD':
         answers[i+1] = 'be'
     elif before_blank[i][0] in ['has','have','had']:
         answers[i+1] = 'been'
