@@ -16,7 +16,7 @@ Set of rules followed in order to find the right form of verb are as follows:-
   *  Remaining answers viz., is, are, was, were are determined by carefully analyzing the information provided by POS tags near the blank as well as the context info. 
 ## Matching Book Names with Descriptions ##
 * With no training data involved, the approach employed to match a description with the correct book was to calculate the _TF-IDF_ score  for each description. This was done by fitting _and_ transforming the vectorizer on all the input descriptions. This resulted in keywords/ title of the book getting relatively larger values than other words.
-* Then, the book names were transformed into feature vectors using the same vectorizer and hence the same vocabulary used to fit the descriptions. Dot product of _book_features_ and _description_features_ was calculated to maximise the values for which similar words exist in both the book names and their descriptions.
+* Then, the book names were transformed into feature vectors using the same vectorizer and hence the same vocabulary was used to fit the descriptions. Dot product of _book_features_ and _description_features_ was calculated to maximise the values for which similar words exist in both the book names and their descriptions.
 ## Gender Prediction ##
 * For each input name, text/ tokens/ words around the word fetched for each appearance of the name in the corpus. The dataset is cleaned prior to this.
 * For each appearance of the name, the salutation or title is checked. If it indicates a particluar gender confidently, a high score or weight is assigned to that name. Positive weights are used for male and negative for female. 
