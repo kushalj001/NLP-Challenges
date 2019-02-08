@@ -24,7 +24,7 @@ Set of rules followed in order to find the right form of verb are as follows:-
 
 ## Transfer Learning on Stack Exchange Data ##
 * After researching a lot I came across the following paper/report. The code related to the deep learning approach is in the script transfer_stack.py. The model details and idea of using the MultiLabelBinarizer are taken from the paper and the following repo https://github.com/viig99/stackexchange-transfer-learning. However, due to limited computational resources this approach did not give the expected results.
-http://www2.agroparistech.fr/ufr-info/membres/cornuejols/Teaching/Master-AIC/PROJETS-M2-AIC/PROJETS-2016-2017/challenge-kaggle-transfer%20KHOUFI_MATMATI_THIERRY.pdf
+The Paper: http://www2.agroparistech.fr/ufr-info/membres/cornuejols/Teaching/Master-AIC/PROJETS-M2-AIC/PROJETS-2016-2017/challenge-kaggle-transfer%20KHOUFI_MATMATI_THIERRY.pdf
 #### Word2Vec Approach ####
 * This approach is a bit crude but requires almost no training time and is not _essentially_ a deep learning approach. 
 * The physics test data set is fed to a TF-IDF vectorizer which spits out the important words in a particular document among all the      documents in the text. For each word in a document/question, cosine similarity with the word-vector of 'phyiscs' is calculated.
