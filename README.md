@@ -28,4 +28,4 @@ The Paper: http://www2.agroparistech.fr/ufr-info/membres/cornuejols/Teaching/Mas
 #### Word2Vec Approach ####
 * This approach is a bit crude but requires almost no training time and is not _essentially_ a deep learning approach. 
 * The physics test data set is fed to a TF-IDF vectorizer which spits out the important words in a particular document among all the      documents in the text. For each word in a document/question, cosine similarity with the word-vector of 'phyiscs' is calculated.
-* The embeddings are trained Google News and are loaded in with gensim. The top three words with greatest similarity score are chosen as tags for that question. 
+* The embeddings are trained Google News and are loaded in with gensim. The top three words with greatest similarity score are chosen as tags for that question. The code for this can be found in the notebook Word2Vec approach.
