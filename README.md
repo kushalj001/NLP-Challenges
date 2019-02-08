@@ -1,5 +1,14 @@
 # NLP-Challenges
 
+
+## Transfer Learning on Stack Exchange Data ##
+* After researching a lot I came across the following paper/report. The code related to the deep learning approach is in the script transfer_stack.py. The model details and idea of using the MultiLabelBinarizer are taken from the paper and the following repo https://github.com/viig99/stackexchange-transfer-learning. However, due to limited computational resources this approach did not give the expected results.
+The Paper: http://www2.agroparistech.fr/ufr-info/membres/cornuejols/Teaching/Master-AIC/PROJETS-M2-AIC/PROJETS-2016-2017/challenge-kaggle-transfer%20KHOUFI_MATMATI_THIERRY.pdf
+#### Word2Vec Approach ####
+* This approach is a bit crude but requires almost no training time and is not _essentially_ a deep learning approach. 
+* The physics test data set is fed to a TF-IDF vectorizer which spits out the important words in a particular document among all the      documents in the text. For each word in a document/question, cosine similarity with the word-vector of 'physics' is calculated.
+* The embeddings are trained Google News and are loaded in with gensim. The top three words with greatest similarity score are chosen as tags for that question. The code for this can be found in the notebook Word2Vec approach.
+
 ## Flipkart Search Query ##
 * The training data is not very large and has only 111 unique entries. In order to get the most out of the limited data, the text is preprocessed thoroughly. Removal of punctuation, tokenization and removal of stop words is done. Lemmatization was not proving to be too useful hence avoided. 
 * The preprocessed text is then fed to a *TF-IDF* (Term frequency-inverse document frequency) vectorizer which converts the words or text features into numeric features. Two classifiers were trained and tested, Random Forest and Support Vector Machine. SVM performed better after choosing correct set of hyperparameters by using Grid search. The problem can be solved more accurately by using string matching techniques.
@@ -22,10 +31,3 @@ Set of rules followed in order to find the right form of verb are as follows:-
 * For each appearance of the name, the salutation or title is checked. If it indicates a particluar gender confidently, a high score or weight is assigned to that name. Positive weights are used for male and negative for female. 
 * The tokens that surround the text are also checked for other male or female words to increase the accuracy. As it turns out the accuracy increases as we add new words to this list according to the corpus.
 
-## Transfer Learning on Stack Exchange Data ##
-* After researching a lot I came across the following paper/report. The code related to the deep learning approach is in the script transfer_stack.py. The model details and idea of using the MultiLabelBinarizer are taken from the paper and the following repo https://github.com/viig99/stackexchange-transfer-learning. However, due to limited computational resources this approach did not give the expected results.
-The Paper: http://www2.agroparistech.fr/ufr-info/membres/cornuejols/Teaching/Master-AIC/PROJETS-M2-AIC/PROJETS-2016-2017/challenge-kaggle-transfer%20KHOUFI_MATMATI_THIERRY.pdf
-#### Word2Vec Approach ####
-* This approach is a bit crude but requires almost no training time and is not _essentially_ a deep learning approach. 
-* The physics test data set is fed to a TF-IDF vectorizer which spits out the important words in a particular document among all the      documents in the text. For each word in a document/question, cosine similarity with the word-vector of 'physics' is calculated.
-* The embeddings are trained Google News and are loaded in with gensim. The top three words with greatest similarity score are chosen as tags for that question. The code for this can be found in the notebook Word2Vec approach.
